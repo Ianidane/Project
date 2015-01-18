@@ -242,7 +242,7 @@ def main():
                 
                     
                 
-                "Activity checkmarks"
+# **********************************Activity checkmarks*****************************************
                 "Physical Training"
                 if globalvars.chkptdis.collidepoint(pos):
                     if globalvars.anotclsed == 1:
