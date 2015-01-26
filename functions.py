@@ -15,8 +15,8 @@ from Main import *
 def info():
 
     "Date"
-    font = pygame.font.Font("mvboli2.ttf", 20)
-    font2 = pygame.font.Font("mvboli2.ttf", 15)
+    font = pygame.font.Font("images/mvboli2.ttf", 20)
+    font2 = pygame.font.Font("images/mvboli2.ttf", 15)
     text = font.render("Date: " + str(globalvars.day) + "/" + str(globalvars.month) + "/" + str(globalvars.year), 1, (1, 1, 1))
     dispinf = globalvars.screen.blit(text, (980, 90))
 
