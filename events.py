@@ -155,6 +155,9 @@ def option2():
     elif globalvars.eventactive == 9:
         Event10()
         
+    if globalvars.eventactive == 3:
+		Event7()
+        
 def option3():
     if globalvars.eventactive == 1:
         globalvars.notclsed = 1
