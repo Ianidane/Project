@@ -52,7 +52,7 @@ def main():
 
 
 
-    "Main loop"
+    #Main loop
     while True:
         globalvars.screen.blit(globalvars.background, (0,0))
         globalvars.date = str(globalvars.day) + "/" + str(globalvars.month) + "/" + str(globalvars.year)
@@ -60,17 +60,17 @@ def main():
 
 
         
-        "pause while popups are open"
+        #pause while popups are open
         if globalvars.notclsed == 1:
             globalvars.ispaused = 1
         if globalvars.onotclsed ==1:
             globalvars.ispaused = 1
         
-        "UI"
+        #UI
         globalvars.screen.blit(globalvars.mapp, (30, 10))
         functions.info()
         
-        "Live button"
+        #Live button
         b = globalvars.screen.blit(globalvars.live, (965,760))
         pos = pygame.mouse.get_pos()
         if b.collidepoint(pos):
@@ -87,14 +87,14 @@ def main():
                 globalvars.live = pygame.image.load("images/live4.png").convert_alpha()
 
 
-        "Inventory button"
+        #Inventory button
         c = globalvars.screen.blit(globalvars.inv, (995,200))
         if c.collidepoint(pos):
             globalvars.inv = pygame.image.load("images/Inv2.png").convert_alpha()
         if not c.collidepoint(pos):
             globalvars.inv = pygame.image.load("images/Inv.png").convert_alpha()
             
-        "Activity button"
+        #Activity button
         d = globalvars.screen.blit(globalvars.act, (990,240))
         if d.collidepoint(pos):
             globalvars.act = pygame.image.load("images/Act2.png").convert_alpha()
@@ -103,33 +103,33 @@ def main():
         
 
 
-        "Activity page open"
+        #Activity page open
         if globalvars.anotclsed == 1:
             globalvars.actscrn = globalvars.screen.blit(globalvars.activityscrn, (280,100))
             font = pygame.font.Font("images/mvboli2.ttf", 20)
             font2 = pygame.font.Font("images/mvboli2.ttf", 15)
             font3 = pygame.font.Font("images/mvboli2.ttf", 30)
             
-            "Title"
+            #Title
             Activity = font3.render("Activity", 1, (1, 1, 1))
             desc = font.render("Please select 2 activities to do in your spare time", 1, (1, 1, 1))
             dispactivity = globalvars.screen.blit(Activity, (520, 130))
             dispdesc = globalvars.screen.blit(desc, (330, 230))
              
-            "Options"
+            #Options
             globalvars.exitdis = globalvars.screen.blit(globalvars.exitld, (780, 210))
             globalvars.chkptdis = globalvars.screen.blit(globalvars.chkptld, (360, 270))
             globalvars.chkotdis = globalvars.screen.blit(globalvars.chkotld, (580, 270))
             globalvars.chkredis = globalvars.screen.blit(globalvars.chkreld, (360, 325))
             globalvars.chktadis = globalvars.screen.blit(globalvars.chktald, (580, 325))
 
-            "Exit mouseover"
+            #Exit mouseover
             if globalvars.exitdis.collidepoint(pos):
                 globalvars.exitld = pygame.image.load("images/exit1.png").convert_alpha()
             if not globalvars.exitdis.collidepoint(pos):
                 globalvars.exitld = pygame.image.load("images/exit.png").convert_alpha()
 
-        "3 option popup"
+        #3 option popup
         if globalvars.onotclsed == 1:
             font = pygame.font.Font("images/mvboli2.ttf", 12)
             font2 = pygame.font.Font("images/mvboli2.ttf", 15)
@@ -150,7 +150,7 @@ def main():
 
             
             
-        "Inventory/stats"
+        #Inventory/stats
         if globalvars.inotclsed == 1:
             dimensions3 = pygame.Rect(globalvars.invbox)
             font = pygame.font.Font("images/mvboli2.ttf", 20)
@@ -161,7 +161,7 @@ def main():
             globalvars.invbox = globalvars.screen.blit(globalvars.box3, (370, 220))
             
 
-            "non wrapped text"
+            #non wrapped text
             health = font.render("Health: " + str(globalvars.health), 1, (1, 1, 1))
             sickness = font.render("Sickness: " + globalvars.sickness, 1, (1, 1, 1))
             strength = font.render("Strength: " + str(globalvars.strength), 1, (1, 1, 1))
@@ -175,7 +175,7 @@ def main():
             displeadership = globalvars.screen.blit(leadership, (635, 450))
             dispcharisma = globalvars.screen.blit(charisma, (360,500))
 
-        "popups"
+        #popups
         if globalvars.notclsed == 1:
             font2 = pygame.font.Font("images/mvboli2.ttf", 15)
             dimensions2 = pygame.Rect(globalvars.popuptxt)
@@ -184,13 +184,13 @@ def main():
             globalvars.popuptxt = globalvars.screen.blit(globalvars.box2, (410, 285))
             globalvars.screen.blit(poptext, dimensions2.topleft)
             
-        "Event Checking"
+        #Event Checking
         for event in pygame.event.get():
             if event.type == QUIT:
                     pygame.quit()
                     sys.exit()
-            "Mouse button down"
-            "Main menu"
+            #Mouse button down
+            #Main menu
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if d.collidepoint(pos):
                     print "act"
@@ -219,31 +219,31 @@ def main():
                         globalvars.ispaused = 0
                         globalvars.notclsed = 0
                         
-                "Options popup"
-                "Option 1 clicked"
+                #Options popup
+                #Option 1 clicked
                 if globalvars.option1blit.collidepoint(pos):
                     if globalvars.onotclsed == 1:
                         globalvars.onotclsed = 0
                         option1()
-                "Option 2 clicked"
+                #Option 2 clicked
                 if globalvars.option2blit.collidepoint(pos):
                     if globalvars.onotclsed == 1:
                         globalvars.onotclsed = 0
                         option2()
-                "Option 3 clicked"
+                #Option 3 clicked
                 if globalvars.option3blit.collidepoint(pos):
                     if globalvars.onotclsed == 1:
                         globalvars.onotclsed = 0
                         option3()
                 
-                "Activity"
+                #Activity
                 if globalvars.exitdis.collidepoint(pos):
                     globalvars.anotclsed = 0
                 
                     
                 
 # **********************************Activity checkmarks*****************************************
-                "Physical Training"
+                #Physical Training
                 if globalvars.chkptdis.collidepoint(pos):
                     if globalvars.anotclsed == 1:
                         if globalvars.ptchecked == 1:
@@ -259,7 +259,7 @@ def main():
                                 break
                 
                         
-                "Officer Training"    
+                #Officer Training  
                 if globalvars.chkotdis.collidepoint(pos):
                     if globalvars.anotclsed == 1:
                         if globalvars.otchecked == 1:
@@ -274,7 +274,7 @@ def main():
                                 globalvars.checkcount = globalvars.checkcount + 1
                                 break
 
-                "Rest"
+                #Rest
                 if globalvars.chkredis.collidepoint(pos):
                     if globalvars.anotclsed == 1:
                         if globalvars.rechecked == 1:
@@ -289,7 +289,7 @@ def main():
                                 globalvars.checkcount = globalvars.checkcount + 1
                                 break
 
-                "Talking"
+                #Talking
                 if globalvars.chktadis.collidepoint(pos):
                     if globalvars.anotclsed == 1:
                         if globalvars.tachecked == 1:

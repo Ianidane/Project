@@ -14,13 +14,13 @@ from Main import *
 
 def info():
 
-    "Date"
+    #Date
     font = pygame.font.Font("images/mvboli2.ttf", 20)
     font2 = pygame.font.Font("images/mvboli2.ttf", 15)
     text = font.render("Date: " + str(globalvars.day) + "/" + str(globalvars.month) + "/" + str(globalvars.year), 1, (1, 1, 1))
     dispinf = globalvars.screen.blit(text, (980, 90))
 
-    "Main Scroll"
+    #Main Scroll
     textbox = globalvars.screen.blit(globalvars.box, (130, 560))
     dimensions = pygame.Rect(textbox)
     scroll = render_textrect(globalvars.scrolllog, font2, dimensions, (1,1,1))
