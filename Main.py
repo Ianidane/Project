@@ -7,7 +7,7 @@ from time import sleep
 from pygame.locals import *
 from functions import *
 
-"makes the date move forward"
+#makes the date move forward
 def time():
     global timer
     timer = threading.Timer(0.50, time).start()
