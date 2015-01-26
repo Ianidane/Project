@@ -75,40 +75,40 @@ def main():
         pos = pygame.mouse.get_pos()
         if b.collidepoint(pos):
             if globalvars.ispaused == 1:
-                globalvars.live = pygame.image.load("live2.png").convert_alpha()
+                globalvars.live = pygame.image.load("images/live2.png").convert_alpha()
         if not b.collidepoint(pos):
             if globalvars.ispaused == 1:
-                globalvars.live = pygame.image.load("live.png").convert_alpha()
+                globalvars.live = pygame.image.load("images/live.png").convert_alpha()
         if b.collidepoint(pos):
             if globalvars.ispaused == 0:
-                globalvars.live = pygame.image.load("live3.png").convert_alpha()
+                globalvars.live = pygame.image.load("images/live3.png").convert_alpha()
         if not b.collidepoint(pos):
             if globalvars.ispaused == 0:
-                globalvars.live = pygame.image.load("live4.png").convert_alpha()
+                globalvars.live = pygame.image.load("images/live4.png").convert_alpha()
 
 
         "Inventory button"
         c = globalvars.screen.blit(globalvars.inv, (995,200))
         if c.collidepoint(pos):
-            globalvars.inv = pygame.image.load("Inv2.png").convert_alpha()
+            globalvars.inv = pygame.image.load("images/Inv2.png").convert_alpha()
         if not c.collidepoint(pos):
-            globalvars.inv = pygame.image.load("Inv.png").convert_alpha()
+            globalvars.inv = pygame.image.load("images/Inv.png").convert_alpha()
             
         "Activity button"
         d = globalvars.screen.blit(globalvars.act, (990,240))
         if d.collidepoint(pos):
-            globalvars.act = pygame.image.load("Act2.png").convert_alpha()
+            globalvars.act = pygame.image.load("images/Act2.png").convert_alpha()
         if not d.collidepoint(pos):
-            globalvars.act = pygame.image.load("Act1.png").convert_alpha()
+            globalvars.act = pygame.image.load("images/Act1.png").convert_alpha()
         
 
 
         "Activity page open"
         if globalvars.anotclsed == 1:
             globalvars.actscrn = globalvars.screen.blit(globalvars.activityscrn, (280,100))
-            font = pygame.font.Font("mvboli2.ttf", 20)
-            font2 = pygame.font.Font("mvboli2.ttf", 15)
-            font3 = pygame.font.Font("mvboli2.ttf", 30)
+            font = pygame.font.Font("images/mvboli2.ttf", 20)
+            font2 = pygame.font.Font("images/mvboli2.ttf", 15)
+            font3 = pygame.font.Font("images/mvboli2.ttf", 30)
             
             "Title"
             Activity = font3.render("Activity", 1, (1, 1, 1))
@@ -125,14 +125,14 @@ def main():
 
             "Exit mouseover"
             if globalvars.exitdis.collidepoint(pos):
-                globalvars.exitld = pygame.image.load("exit1.png").convert_alpha()
+                globalvars.exitld = pygame.image.load("images/exit1.png").convert_alpha()
             if not globalvars.exitdis.collidepoint(pos):
-                globalvars.exitld = pygame.image.load("exit.png").convert_alpha()
+                globalvars.exitld = pygame.image.load("images/exit.png").convert_alpha()
 
         "3 option popup"
         if globalvars.onotclsed == 1:
-            font = pygame.font.Font("mvboli2.ttf", 12)
-            font2 = pygame.font.Font("mvboli2.ttf", 15)
+            font = pygame.font.Font("images/mvboli2.ttf", 12)
+            font2 = pygame.font.Font("images/mvboli2.ttf", 15)
             dimensionsopopup = pygame.Rect(globalvars.opopupbox)
             globalvars.opopupscrn = globalvars.screen.blit(globalvars.opopupld, (280,100))
             optionpopuptext = render_textrect(globalvars.opopuptxt, font2, dimensionsopopup, (1,1,1))
@@ -153,8 +153,8 @@ def main():
         "Inventory/stats"
         if globalvars.inotclsed == 1:
             dimensions3 = pygame.Rect(globalvars.invbox)
-            font = pygame.font.Font("mvboli2.ttf", 20)
-            font2 = pygame.font.Font("mvboli2.ttf", 15)
+            font = pygame.font.Font("images/mvboli2.ttf", 20)
+            font2 = pygame.font.Font("images/mvboli2.ttf", 15)
             globalvars.invscrn = globalvars.screen.blit(globalvars.inventoryscrn, (280,100))
             invtext = render_textrect(globalvars.inventorytext, font, dimensions3, (1,1,1))
             globalvars.screen.blit(invtext, dimensions3.topleft)
@@ -177,7 +177,7 @@ def main():
 
         "popups"
         if globalvars.notclsed == 1:
-            font2 = pygame.font.Font("mvboli2.ttf", 15)
+            font2 = pygame.font.Font("images/mvboli2.ttf", 15)
             dimensions2 = pygame.Rect(globalvars.popuptxt)
             poptext = render_textrect(globalvars.popmsg, font2, dimensions2, (1,1,1))
             globalvars.pop = globalvars.screen.blit(globalvars.popup, (350,220))
@@ -247,13 +247,13 @@ def main():
                 if globalvars.chkptdis.collidepoint(pos):
                     if globalvars.anotclsed == 1:
                         if globalvars.ptchecked == 1:
-                                globalvars.chkptld = pygame.image.load("pt1.png").convert_alpha()
+                                globalvars.chkptld = pygame.image.load("images/pt1.png").convert_alpha()
                                 globalvars.ptchecked = 0
                                 globalvars.checkcount = globalvars.checkcount - 1
                                 break
                         if globalvars.checkcount < 2:
                             if globalvars.ptchecked == 0:
-                                globalvars.chkptld = pygame.image.load("pt2.png").convert_alpha()
+                                globalvars.chkptld = pygame.image.load("images/pt2.png").convert_alpha()
                                 globalvars.ptchecked = 1
                                 globalvars.checkcount = globalvars.checkcount + 1
                                 break
@@ -263,13 +263,13 @@ def main():
                 if globalvars.chkotdis.collidepoint(pos):
                     if globalvars.anotclsed == 1:
                         if globalvars.otchecked == 1:
-                                globalvars.chkotld = pygame.image.load("ot1.png").convert_alpha()
+                                globalvars.chkotld = pygame.image.load("images/ot1.png").convert_alpha()
                                 globalvars.otchecked = 0
                                 globalvars.checkcount = globalvars.checkcount - 1
                                 break
                         if globalvars.checkcount < 2:
                             if globalvars.otchecked == 0:
-                                globalvars.chkotld = pygame.image.load("ot2.png").convert_alpha()
+                                globalvars.chkotld = pygame.image.load("images/ot2.png").convert_alpha()
                                 globalvars.otchecked = 1
                                 globalvars.checkcount = globalvars.checkcount + 1
                                 break
@@ -278,13 +278,13 @@ def main():
                 if globalvars.chkredis.collidepoint(pos):
                     if globalvars.anotclsed == 1:
                         if globalvars.rechecked == 1:
-                                globalvars.chkreld = pygame.image.load("re1.png").convert_alpha()
+                                globalvars.chkreld = pygame.image.load("images/re1.png").convert_alpha()
                                 globalvars.rechecked = 0
                                 globalvars.checkcount = globalvars.checkcount - 1
                                 break
                         if globalvars.checkcount < 2:
                             if globalvars.rechecked == 0:
-                                globalvars.chkreld = pygame.image.load("re2.png").convert_alpha()
+                                globalvars.chkreld = pygame.image.load("images/re2.png").convert_alpha()
                                 globalvars.rechecked = 1
                                 globalvars.checkcount = globalvars.checkcount + 1
                                 break
@@ -293,14 +293,14 @@ def main():
                 if globalvars.chktadis.collidepoint(pos):
                     if globalvars.anotclsed == 1:
                         if globalvars.tachecked == 1:
-                                globalvars.chktald = pygame.image.load("ta1.png").convert_alpha()
+                                globalvars.chktald = pygame.image.load("images/ta1.png").convert_alpha()
                                 globalvars.tachecked = 0
                                 globalvars.checkcount = globalvars.checkcount - 1
                                 break
                             
                         if globalvars.checkcount < 2:
                             if globalvars.tachecked == 0:
-                                globalvars.chktald = pygame.image.load("ta2.png").convert_alpha()
+                                globalvars.chktald = pygame.image.load("images/ta2.png").convert_alpha()
                                 globalvars.tachecked = 1
                                 globalvars.checkcount = globalvars.checkcount + 1
                                 break

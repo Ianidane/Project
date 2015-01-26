@@ -53,43 +53,43 @@ tachecked = 0
 "misc stuff"
 rect = pygame.Rect(878, 48, 200, 100)
 screen = pygame.display.set_mode((1200, 900),0,32)
-live = pygame.image.load("live.png").convert_alpha()
-inv = pygame.image.load("Inv.png").convert_alpha()
-act = pygame.image.load("Act1.png").convert_alpha()
-mapp = pygame.image.load("map.png").convert_alpha()
-background = pygame.image.load("back.png").convert_alpha()
-box = pygame.image.load("box.png").convert_alpha()
+live = pygame.image.load("images/live.png").convert_alpha()
+inv = pygame.image.load("images/Inv.png").convert_alpha()
+act = pygame.image.load("images/Act1.png").convert_alpha()
+mapp = pygame.image.load("images/map.png").convert_alpha()
+background = pygame.image.load("images/back.png").convert_alpha()
+box = pygame.image.load("images/box.png").convert_alpha()
 checkcount = 0
 
 
 "popup images"
-popup = pygame.image.load("popup.png").convert_alpha()
+popup = pygame.image.load("images/popup.png").convert_alpha()
 pop = screen.blit(popup, (100,100))
-box2 = pygame.image.load("box2.png").convert_alpha()
+box2 = pygame.image.load("images/box2.png").convert_alpha()
 popuptxt = screen.blit(box2, (300,200))
 popmsg = "The year is 1803 and Europe is preparing for a massive coalition war against Napoleon. \n You have enlisted as a shiphand aboard the " + str(currship) + " with the British Royal Navy "
 
 "Activity popup"
-exitld = pygame.image.load("exit.png").convert_alpha()
-exitld1 = pygame.image.load("exit1.png").convert_alpha()
+exitld = pygame.image.load("images/exit.png").convert_alpha()
+exitld1 = pygame.image.load("images/exit1.png").convert_alpha()
 exitdis = screen.blit(exitld, (500, 100))
-activityscrn = pygame.image.load("activity.png").convert_alpha()
+activityscrn = pygame.image.load("images/activity.png").convert_alpha()
 actscrn = screen.blit(activityscrn, (100,100))
 
 "Activity checkmarks"
-chkptld = pygame.image.load("pt1.png").convert_alpha()
-chkptld2 = pygame.image.load("pt2.png").convert_alpha()
+chkptld = pygame.image.load("images/pt1.png").convert_alpha()
+chkptld2 = pygame.image.load("images/pt2.png").convert_alpha()
 chkptdis = screen.blit(chkptld, (300, 200))
-chkotld = pygame.image.load("ot1.png").convert_alpha()
+chkotld = pygame.image.load("images/ot1.png").convert_alpha()
 chkotdis = screen.blit(chkotld, (500, 200))
-chkreld = pygame.image.load("re1.png").convert_alpha()
+chkreld = pygame.image.load("images/re1.png").convert_alpha()
 chkredis = screen.blit(chkreld, (500, 200))
-chktald = pygame.image.load("ta1.png").convert_alpha()
+chktald = pygame.image.load("images/ta1.png").convert_alpha()
 chktadis = screen.blit(chktald, (500, 200))
 
 "Option popup"
-box4 = pygame.image.load("opopuptxtbox.png").convert_alpha()
-opopupld = pygame.image.load("opopup.png").convert_alpha()
+box4 = pygame.image.load("images/opopuptxtbox.png").convert_alpha()
+opopupld = pygame.image.load("images/opopup.png").convert_alpha()
 opopupscrn = screen.blit(opopupld, (280,100))
 option1 = 1
 option2 = 1
@@ -100,17 +100,17 @@ option1txt = "From something"
 option2txt = "I"
 option3txt = "Michael sucks"
 opopupbox = screen.blit(box4, (335, 150))
-option1ld = pygame.image.load("option1.png").convert_alpha()
-option2ld = pygame.image.load("option2.png").convert_alpha()
-option3ld = pygame.image.load("option3.png").convert_alpha()
+option1ld = pygame.image.load("images/option1.png").convert_alpha()
+option2ld = pygame.image.load("images/option2.png").convert_alpha()
+option3ld = pygame.image.load("images/option3.png").convert_alpha()
 option1blit = screen.blit(option1ld, (315, 489))
 option2blit = screen.blit(option2ld, (315, 529))
 option3blit = screen.blit(option3ld, (315, 569))
 
 
 "Inventory popup"
-box3 = pygame.image.load("box3.png").convert_alpha()
-inventoryscrn = pygame.image.load("Inventory.png").convert_alpha()
+box3 = pygame.image.load("images/box3.png").convert_alpha()
+inventoryscrn = pygame.image.load("images/Inventory.png").convert_alpha()
 invscrn = screen.blit(inventoryscrn, (100,100))
 invbox = screen.blit(box3, (160, 80))
 
