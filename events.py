@@ -10,7 +10,7 @@ from Main import *
 
 
         
-    "TESTING FOR GITHUB"
+    #Testing for github
 
 def Event1():
     if globalvars.eventactive == 1:
