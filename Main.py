@@ -6,6 +6,9 @@ from events import *
 from time import sleep
 from pygame.locals import *
 from functions import *
+from Tkinter import *
+
+
 
 #makes the date move forward
 def time():
@@ -35,13 +38,39 @@ def time():
             globalvars.month = 1
             globalvars.year = globalvars.year + 1
 
+class NameEnter:
 
+	def __init__(self, parent):
 
+		top = self.top = Toplevel(parent)
+		Label(top, text="Sailors Name").pack()
+		self.e = Entry(top)
+		self.e.pack(padx=5)
+		b = Button(top, text="OK", command=self.ok)
+		b.pack(pady=5)
+		
+
+	def ok(self):
+		#global SailorName
+		print self.e.get()
+		#SailorName = self.e.get()
+		
+		globalvars.SailorName = self.e.get()
+		self.top.destroy()
+		
+
+root = Tk()
+root.withdraw()
+root.update()
+d = NameEnter(root)
+root.wait_window(d.top)
+root.destroy
 
 
 def main():
 
     print "Hello"
+    print globalvars.SailorName
     
     pygame.init()
     globalvars.screen
@@ -51,13 +80,13 @@ def main():
     pygame.display.set_caption('Army Project')
 
 
-
     #Main loop
     while True:
         globalvars.screen.blit(globalvars.background, (0,0))
         globalvars.date = str(globalvars.day) + "/" + str(globalvars.month) + "/" + str(globalvars.year)
-
-
+        #NameEnter().mainloop()
+        
+        
 
         
         #pause while popups are open
@@ -318,8 +347,7 @@ def main():
         
         pygame.display.update()
 
-if __name__ == '__main__':
-    main()
+if __name__ == '__main__': main()
     
                         
 

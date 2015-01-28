@@ -1,6 +1,7 @@
 import pygame, sys
 import random
 import threading
+import Main
 from pygame.locals import *
 year = 1803
 month = 1
@@ -9,6 +10,7 @@ day = 1
 
 date = str(day) + "/" + str(month) + "/" + str(year)
 print date
+#print Main.SailorName
 
 firststart = 0
 ispaused = 1
@@ -31,6 +33,7 @@ eshipcrew = 80
 
 
 #health/stats
+SailorName = "NoName"
 sickness = "none"
 health = 100
 strength = 1
@@ -116,7 +119,7 @@ invbox = screen.blit(box3, (160, 80))
 
 inventorytext = "                   Inventory \n \n \n \n \n \n                   Statistics"
 
-scrolllog = "1/1/1803 - " + charname + " Enlisted as a shiphand on " + currship + " under " + captain + "\n \n 1/1/1803 - Mission: " + mission + " Issued to " + captain
+scrolllog = "1/1/1803 - " + SailorName + " Enlisted as a shiphand on " + currship + " under " + captain + "\n \n 1/1/1803 - Mission: " + mission + " Issued to " + captain
 
                         
 
