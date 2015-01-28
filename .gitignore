@@ -1,3 +1,5 @@
+# Pythons .pyc files
+*.pyc
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
