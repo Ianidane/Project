@@ -21,6 +21,7 @@ def Event1():
     globalvars.option2txt = "Grab a musket instead and prepare for a possible boarding."
     globalvars.option3txt = "Hide below decks and hope you arn't caught."
     globalvars.eventactive = 2
+    globalvars.Event1flagged = 1
         
 def Event2():
     globalvars.onotclsed = 1
