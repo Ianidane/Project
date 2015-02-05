@@ -54,7 +54,6 @@ class NameEnter:
 		#global SailorName
 		print self.e.get()
 		#SailorName = self.e.get()
-		
 		globalvars.SailorName = self.e.get()
 		self.top.destroy()
 		

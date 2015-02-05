@@ -121,6 +121,7 @@ inventorytext = "                   Inventory \n \n \n \n \n \n                 
 
 scrolllog = "1/1/1803 - " + SailorName + " Enlisted as a shiphand on " + currship + " under " + captain + "\n \n 1/1/1803 - Mission: " + mission + " Issued to " + captain
 
+Event1flagged = 0
                         
 
 

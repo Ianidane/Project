@@ -20,12 +20,15 @@ def info():
     text = font.render("Date: " + str(globalvars.day) + "/" + str(globalvars.month) + "/" + str(globalvars.year), 1, (1, 1, 1))
     dispinf = globalvars.screen.blit(text, (980, 90))
 
+<<<<<<< HEAD
     #Main Scroll
     textbox = globalvars.screen.blit(globalvars.box, (130, 560))
     dimensions = pygame.Rect(textbox)
     scroll = render_textrect(globalvars.scrolllog, font2, dimensions, (1,1,1))
     if scroll:
         globalvars.screen.blit(scroll, dimensions.topleft)
+=======
+>>>>>>> d36233e470c2370a81384b9106dc4906cf6cdc53
 
 def Act():
     globalvars.anotclsed = 1
@@ -42,9 +45,10 @@ def liveseq():
         globalvars.popmsg = "As the days pass by, you can feel yourself getting older"
         globalvars.health = globalvars.health - 1
     if random.random() < .30:
-        globalvars.onotclsed = 1
-        globalvars.option1 = 1
-        Event1()
+		if globalvars.Event1flagged == 0:
+			globalvars.onotclsed = 1
+			globalvars.option1 = 1
+			Event1()
         
     
     

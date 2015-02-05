@@ -21,6 +21,7 @@ def Event1():
     globalvars.option2txt = "Grab a musket instead and prepare for a possible boarding."
     globalvars.option3txt = "Hide below decks and hope you arn't caught."
     globalvars.eventactive = 2
+    globalvars.Event1flagged = 1
         
 def Event2():
     globalvars.onotclsed = 1
@@ -29,6 +30,14 @@ def Event2():
     globalvars.option2txt = "Run above deck and grab a musket and sword to engage."
     globalvars.option3txt = "Hide below decks and hope you arn't caught."
     globalvars.eventactive = 3
+    
+def Event13():
+    globalvars.onotclsed = 1
+    globalvars.opopuptxt = "Before firing, you go above deck against your officer's orders. You determine that you still have enough time to preload muskets lined along the side of the ship to prepare for combat."
+    globalvars.option1txt = "Preload muskets"
+    globalvars.option2txt = "Hide below decks and hope you arn'y caught."
+    globalvars.option3txt = "Hide below decks and hope you arn't caught."
+    globalvars.eventactive = 13
         
 def Event11():
     globalvars.onotclsed = 1
@@ -141,7 +150,10 @@ def option1():
 def option2():   
     if globalvars.eventactive == 2:
         Event7()
-        
+    elif globalvars.eventactive == 3:
+	Event13()
+    elif globalvars.eventactive == 8:
+	Event2()  
     elif globalvars.eventactive == 9:
         Event10()
         
