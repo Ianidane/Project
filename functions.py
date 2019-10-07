@@ -20,15 +20,12 @@ def info():
     text = font.render("Date: " + str(globalvars.day) + "/" + str(globalvars.month) + "/" + str(globalvars.year), 1, (1, 1, 1))
     dispinf = globalvars.screen.blit(text, (980, 90))
 
-<<<<<<< HEAD
     #Main Scroll
     textbox = globalvars.screen.blit(globalvars.box, (130, 560))
     dimensions = pygame.Rect(textbox)
     scroll = render_textrect(globalvars.scrolllog, font2, dimensions, (1,1,1))
     if scroll:
         globalvars.screen.blit(scroll, dimensions.topleft)
-=======
->>>>>>> d36233e470c2370a81384b9106dc4906cf6cdc53
 
 def Act():
     globalvars.anotclsed = 1
